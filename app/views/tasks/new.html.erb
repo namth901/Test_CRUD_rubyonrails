@@ -1,5 +1,6 @@
 <h1>Add New</h1>
 <%= form_for :task, url:tasks_path do |f| %>
+<%= render 'shared/error_messages', object: f.object %>
 	<p>
 		<%= f.label :content %><br/>
 		<%= f.text_field :content %><br/>
