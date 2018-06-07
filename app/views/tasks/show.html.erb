@@ -1,0 +1,17 @@
+<h1>Tasks#Show</h1>
+<p>
+	ID: <%= @task.id %>
+</p>
+<p>
+	Content: <%= @task.content %>
+</p>
+<p>
+	Comment: <%= @task.comment %>
+</p>
+<p>
+	Status: <%= @task.status %>
+</p>
+<hr>
+<%= link_to 'Back', tasks_path %> &nbsp;&nbsp;&nbsp;
+<%= link_to 'Edit', edit_task_path(@task) %>&nbsp;&nbsp;&nbsp;
+<%= link_to 'Delete', task_path(@task),method: :delete,data: {confirm: 'Are you sure?'} %>

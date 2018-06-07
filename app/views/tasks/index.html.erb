@@ -1,0 +1,17 @@
+<h1>Tasks#Index</h1>
+<%= link_to 'Add', new_task_path %>
+<table border="1">
+	<tr>
+		<th>Content</th>
+		<th>Note</th>
+		<th>Status</th>
+	</tr>
+	<% @tasks.each do |task| %>
+		<tr>
+			<td><%= task.content %></td>
+			<td><%= task.comment %></td>
+			<td><%= task.status %></td>
+			<td><%= link_to 'Show', task_path(task) %></td>
+		</tr>
+	<% end %>
+</table>
